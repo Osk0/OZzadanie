@@ -21,10 +21,10 @@
             
             <Label Text="Wybierz Kostkę: " />
             
-            <RadioButton x:Name="k2" Content="k2" />
-            <RadioButton x:Name="k4" Content="k4" />
-            <RadioButton x:Name="k6" Content="k6" />
-            <RadioButton x:Name="k8" Content="k8"
+            <RadioButton x:Name="k2" Content="k2" GroupName="Options" CheckedChanged="RadioButtonCheckedChanged"/>
+            <RadioButton x:Name="k4" Content="k4" GroupName="Options" CheckedChanged="RadioButtonCheckedChanged"/>
+            <RadioButton x:Name="k6" Content="k6" GroupName="Options" CheckedChanged="RadioButtonCheckedChanged"/>
+            <RadioButton x:Name="k8" Content="k8" GroupName="Options" CheckedChanged="RadioButtonCheckedChanged"
                  IsChecked="true" />
 
             <Button

@@ -9,15 +9,20 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void RadioButtonCheckedChanged(object sender, EventArgs e)
         {
-            Random r = new Random();
-            int diceRoll = r.Next(1, 7);
+            if (sender is RadioButton radioButton && radioButton.IsChecked)
+            {
+         
+                    Random r = new Random();
+                    int diceRoll = r.Next(1, 7);
 
-            RollValueLabel.Text = "Wylosowany rzut: " + diceRoll.ToString();
+                    RollValueLabel.Text = "Wylosowany rzut: " + diceRoll.ToString();
+
+                    SemanticScreenReader.Announce(CounterBtn.Text);
+                }
             
-            SemanticScreenReader.Announce(CounterBtn.Text);
         }
-    }
 
+    }
 }
